@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./flipclock.css">
+
+		<script src="./jquery.min.js"></script>
+
+		<script src="./flipclock.js"></script>
+
+	
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+	
+	
+	
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+#footer {
+  background-color: abc123;
+  padding: 20px;
+  text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Chatbox.info</h1>
+</div>
+
+<div class="topnav">
+  <a href="Login.html"> singin</a>
+  <a href="reg.html">Signup</a>
+  <a href="about.html">about</a>
+     <a href="contact.html">contact</a>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h2>hgvfvhjy</h2>
+    <image src="./1.jpg" height="50px" width="75px">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+
+  <div class="column">
+    <h2>Column</h2>
+        <image src="./2.jpg" height="50px" width="75px">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Column</h2>
+      <image src="./3.jpg"  height="50px" width="75px">>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+</div>
+
+	<div class="clock" style="margin:2em;"></div>
+	<div class="message"></div>
+
+	<script type="text/javascript">
+		var clock;
+		
+		$(document).ready(function() {
+			var clock;
+
+			clock = $('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('The clock has stopped!')
+		        	}
+		        }
+		    });
+				    
+		    clock.setTime(220880);
+		    clock.setCountdown(true);
+		    clock.start();
+
+		});
+	</script>
+<footer id="footer"> </footer>
+</html>
